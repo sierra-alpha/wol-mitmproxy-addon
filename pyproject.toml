@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "wol-mitmproxy-addon"
+version = "0.1.0"
+description = "mtimproxy addon to wake upstream servers if required."
+authors = ["Shaun Alexander <shaun@sierraalpha.co.nz>"]
+license = "GPL-3.0"
+
+[tool.poetry.scripts]
+wol-mitmproxy-addon = "wol_mitmproxy_addon.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mitmproxy = "^11.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+ruff = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
