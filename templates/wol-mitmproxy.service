@@ -1,0 +1,12 @@
+[Unit]
+Description=WOL Mitmproxy
+After=network-online.target
+
+# Make this a template for host
+[Service]
+ExecStart=/usr/local/bin/mitmproxy -s /usr/local/bin/wol-mitmproxy-addon.py 
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
