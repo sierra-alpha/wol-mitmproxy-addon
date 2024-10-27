@@ -1,0 +1,13 @@
+### Standard Mitmproxy options can be gleaned from mitmdump --options
+
+# Options specific to this addon
+
+wol-addon-options:
+  service1:
+    host-address: obsidian.sierraalpha.co.nz
+    host-port: 9090
+    host-mac-addresses:
+      - "54:A0:50:50:89:DE"
+      - "90:E2:BA:16:55:2C"
+      - "B6:BB:0E:E2:3C:28"
+

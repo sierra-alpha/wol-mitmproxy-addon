@@ -1,0 +1,10 @@
+[Unit]
+Description=Start the Systemd service keep-host-awake-when-connected.service every 10 secs after it completed last.
+
+[Timer]
+OnBootSec=10seconds
+OnUnitActiveSec=10second
+OnUnitInactiveSec=10second
+
+[Install]
+WantedBy=timers.target

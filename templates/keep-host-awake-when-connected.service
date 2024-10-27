@@ -1,0 +1,17 @@
+[Unit]
+Description=Keeps host awake while it has connections
+After=network-online.target
+
+[Service]
+ExecCondition=bash -c '[[ "$(netstat -t -u | tail -n +3 | grep -v ":bootpc ")" ]]'
+ExecStart=systemd-inhibit \
+  --what "sleep:idle" \
+  --who "Network Connections" \
+  --why "We don't want to sleep while this sleepy server is serving clients" \
+  bash -c \
+    'while [[ "$(netstat -t -u | tail -n +3 | grep -v ":bootpc ")" ]]; do sleep 10; done;'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
