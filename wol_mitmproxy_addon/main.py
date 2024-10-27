@@ -13,13 +13,59 @@ logger = logging.getLogger(__name__)
 
 def server_connect(data: proxy.server_hooks.ServerConnectionHookData) -> None:
     logger.info(f"data: {data!r}")
-    send_wol("54:A0:50:50:89:DE")
-    send_wol("90:E2:BA:16:55:2C")
-    send_wol("B6:BB:0E:E2:3C:28")
+    # [22:34:20.877] data: ServerConnectionHookData(
+    #   server=Server(
+    #       {
+    #           'id': '…1fe0f0',
+    #           'address': ('obsidian.sierraalpha.co.nz', 9090),
+    #           'sni': 'obsidian.sierraalpha.co.nz'
+    #       }
+    #   ),
+    #   client=Client(
+    #       {'id': '…793101',
+    #        'address': None,
+    #        'peername': ('192.168.0.60', 53766),
+    #        'sockname': ('192.168.0.60', 8080),
+    #        'state': <ConnectionState.OPEN: 3>,
+    #        'timestamp_start': 1729935260.8765533,
+    #        'proxy_mode': ProxyMode.parse('reverse:tls://obsidian.sierraalpha.co.nz:9090')
+    #        }
+    #   )
+    # )
+    temp_send_our_wols()
 
 
-def request(flow: http.HTTPFlow) -> None:
-    logger.info(f"Flow: {flow!r}")
+def tls_start_server(data) -> None:
+    logger.info(f"tls start server data: {data!r}")
+    temp_send_our_wols()
+
+
+def quic_start_server(data) -> None:
+    logger.info(f"quic start server data: {data!r}")
+    temp_send_our_wols()
+
+
+def tcp_start(flow) -> None:
+    logger.info(f"tcp Flow: {flow!r}")
+    temp_send_our_wols()
+
+
+def udp_start(flow) -> None:
+    logger.info(f"udp Flow: {flow!r}")
+    temp_send_our_wols()
+
+
+def request_headers(flow) -> None:
+    logger.info(f"http headers Flow: {flow!r}")
+    temp_send_our_wols()
+
+
+def websocket_start(flow) -> None:
+    logger.info(f"websocket Flow: {flow!r}")
+    temp_send_our_wols()
+
+
+def temp_send_our_wols():
     send_wol("54:A0:50:50:89:DE")
     send_wol("90:E2:BA:16:55:2C")
     send_wol("B6:BB:0E:E2:3C:28")
