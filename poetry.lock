@@ -634,13 +634,13 @@ files = [
 
 [[package]]
 name = "mitmproxy"
-version = "11.0.0"
+version = "11.0.2"
 description = "An interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "mitmproxy-11.0.0-py3-none-any.whl", hash = "sha256:0a23ececdbd32c7bf8886d55538661c593cdd3ab4bb712f2e85577a68d76211c"},
+    {file = "mitmproxy-11.0.2-py3-none-any.whl", hash = "sha256:95db7b57b21320a0c76e59e1d6644daaa431291cdf89419608301424651199b4"},
 ]
 
 [package.dependencies]
@@ -648,74 +648,73 @@ aioquic = ">=1.1.0,<=1.2.0"
 asgiref = ">=3.2.10,<=3.8.1"
 Brotli = ">=1.0,<=1.1.0"
 certifi = ">=2019.9.11"
-cryptography = ">=42.0,<43.1"
-flask = ">=3.0,<=3.0.3"
+cryptography = ">=42.0,<44.1"
+flask = ">=3.0,<=3.1.0"
 h11 = ">=0.11,<=0.14.0"
 h2 = "4.1"
 hyperframe = ">=6.0,<=6.0.1"
 kaitaistruct = "0.10"
 ldap3 = ">=2.8,<=2.9.1"
-mitmproxy-rs = ">=0.9.1,<0.10"
+mitmproxy_rs = ">=0.10.7,<0.11"
 msgpack = ">=1.0.0,<=1.1.0"
 passlib = ">=1.6.5,<=1.7.4"
-protobuf = ">=5.27.2,<=5.28.2"
 publicsuffix2 = ">=2.20190812,<=2.20191221"
 pydivert = {version = ">=2.0.3,<=2.1.0", markers = "sys_platform == \"win32\""}
-pyOpenSSL = ">=22.1,<=24.2.1"
-pyparsing = ">=2.4.2,<=3.1.4"
+pyOpenSSL = ">=22.1,<=24.3.0"
+pyparsing = ">=2.4.2,<=3.2.0"
 pyperclip = "1.9.0"
 "ruamel.yaml" = ">=0.16,<=0.18.6"
 sortedcontainers = ">=2.3,<=2.4.0"
-tornado = "6.4.1"
+tornado = ">=6.4.1,<=6.4.2"
 typing-extensions = {version = ">=4.3,<=4.11.0", markers = "python_version < \"3.11\""}
-urwid = ">=2.6.14,<=2.6.15"
+urwid = ">=2.6.14,<=2.6.16"
 wsproto = ">=1.0,<=1.2.0"
 zstandard = ">=0.15,<=0.23.0"
 
 [package.extras]
-dev = ["build (>=0.10.0,<=1.2.2)", "click (>=7.0,<=8.1.7)", "hypothesis (>=6.104.2,<=6.112.2)", "mypy (>=1.10.1,<=1.11.2)", "pdoc (>=14.5.1,<=14.7.0)", "pyinstaller (==6.10.0)", "pyinstaller-hooks-contrib (==2024.8)", "pytest (>=8.2.2,<=8.3.3)", "pytest-asyncio (>=0.23.6,<=0.24.0)", "pytest-cov (==5.0.0)", "pytest-timeout (==2.3.1)", "pytest-xdist (>=3.5.0,<=3.6.1)", "requests (>=2.9.1,<=2.32.3)", "ruff (>=0.5.0,<=0.6.8)", "tox (>=4.15.1,<=4.21.0)", "types-Flask (==1.1.6)", "types-Werkzeug (==1.0.9)", "types-certifi (==2021.10.8.3)", "types-cryptography (==3.3.23.2)", "types-pyOpenSSL (>=23.3.0.0,<=24.1.0.20240722)", "types-requests (>=2.32.0.20240622,<=2.32.0.20240914)", "wheel (>=0.36.2,<=0.44.0)"]
+dev = ["build (>=0.10.0,<=1.2.2.post1)", "click (>=7.0,<=8.1.7)", "hypothesis (>=6.104.2,<=6.122.1)", "mypy (>=1.10.1,<=1.13.0)", "pdoc (>=14.5.1,<=15.0.0)", "pyinstaller (==6.11.1)", "pyinstaller-hooks-contrib (==2024.10)", "pytest (>=8.2.2,<=8.3.4)", "pytest-asyncio (>=0.23.6,<=0.24.0)", "pytest-cov (>=5.0.0,<=6.0.0)", "pytest-timeout (==2.3.1)", "pytest-xdist (>=3.5.0,<=3.6.1)", "requests (>=2.9.1,<=2.32.3)", "ruff (>=0.5.0,<=0.8.1)", "tox (>=4.15.1,<=4.23.2)", "types-Flask (==1.1.6)", "types-Werkzeug (==1.0.9)", "types-certifi (==2021.10.8.3)", "types-cryptography (==3.3.23.2)", "types-pyOpenSSL (>=23.3.0.0,<=24.1.0.20240722)", "types-requests (>=2.32.0.20240622,<=2.32.0.20241016)", "wheel (>=0.36.2,<=0.45.1)"]
 
 [[package]]
 name = "mitmproxy-macos"
-version = "0.9.3"
+version = "0.10.7"
 description = ""
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "sys_platform == \"darwin\""
 files = [
-    {file = "mitmproxy_macos-0.9.3-py3-none-any.whl", hash = "sha256:28be44bb371f356455de0ab7a9e5142fac9f38f74746903eaa1fb86f7b924c0b"},
+    {file = "mitmproxy_macos-0.10.7-py3-none-any.whl", hash = "sha256:e01664e1a31479818596641148ab80b5b531b03c8c9f292af8ded7103291db82"},
 ]
 
 [[package]]
 name = "mitmproxy-rs"
-version = "0.9.3"
+version = "0.10.7"
 description = ""
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "mitmproxy_rs-0.9.3-cp310-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:4801c25d57205ff0caeb84cef6a9327e6225213e8f68455c8674a1cb3f6db2ff"},
-    {file = "mitmproxy_rs-0.9.3-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5fd333d03a6784fa54d3eecd976a93fceb38490c7413da66012c105466730b08"},
-    {file = "mitmproxy_rs-0.9.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9c8108b53b5e0f8dff3de9d43b3225f0abbbe94138b9488ab0c773273ffd5da7"},
-    {file = "mitmproxy_rs-0.9.3-cp310-abi3-win_amd64.whl", hash = "sha256:9536eebb43421d25a4ee6913676bc5ba483d4e7018d267f16d086910cfe81be0"},
-    {file = "mitmproxy_rs-0.9.3.tar.gz", hash = "sha256:e54e4a61b5fb4a204a1dd37fbe2f4bc28a6e82e5229e396fc5e1aae447f939b3"},
+    {file = "mitmproxy_rs-0.10.7-cp310-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:8b8eedccd2b03ff2f9505bd9005a54f796d2e40f731dd7246e6656075935ae6b"},
+    {file = "mitmproxy_rs-0.10.7-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bb648320f9007378f67d70479727db862faa2b7832dddaa4eef376d8c94d8388"},
+    {file = "mitmproxy_rs-0.10.7-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9a57f099b80e5aaf2d98764761dab8e1644ae011c7cf2696079f68eecda0089c"},
+    {file = "mitmproxy_rs-0.10.7-cp310-abi3-win_amd64.whl", hash = "sha256:5a95503f57c1d991641690d6e0a9a3e4df484832bed1da1e81b6cf53acf18f75"},
+    {file = "mitmproxy_rs-0.10.7.tar.gz", hash = "sha256:0959a540766403222464472b64122ac8ccbca66b5f019154496b98e62482277f"},
 ]
 
 [package.dependencies]
-mitmproxy-macos = {version = "0.9.3", markers = "sys_platform == \"darwin\""}
-mitmproxy-windows = {version = "0.9.3", markers = "os_name == \"nt\""}
+mitmproxy-macos = {version = "0.10.7", markers = "sys_platform == \"darwin\""}
+mitmproxy-windows = {version = "0.10.7", markers = "os_name == \"nt\""}
 
 [[package]]
 name = "mitmproxy-windows"
-version = "0.9.3"
+version = "0.10.7"
 description = ""
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "os_name == \"nt\""
 files = [
-    {file = "mitmproxy_windows-0.9.3-py3-none-any.whl", hash = "sha256:a451ac04d2cb960c778f72a3dfb9af9d8c758e4e579c817b88f070813035d30b"},
+    {file = "mitmproxy_windows-0.10.7-py3-none-any.whl", hash = "sha256:be2eb85980d69dcc5159bbbcd673f3a6966b6e3b34419eed6d5bfb36ed4cf9a3"},
 ]
 
 [[package]]
@@ -837,27 +836,6 @@ files = [
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
-
-[[package]]
-name = "protobuf"
-version = "5.28.2"
-description = ""
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "protobuf-5.28.2-cp310-abi3-win32.whl", hash = "sha256:eeea10f3dc0ac7e6b4933d32db20662902b4ab81bf28df12218aa389e9c2102d"},
-    {file = "protobuf-5.28.2-cp310-abi3-win_amd64.whl", hash = "sha256:2c69461a7fcc8e24be697624c09a839976d82ae75062b11a0972e41fd2cd9132"},
-    {file = "protobuf-5.28.2-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:a8b9403fc70764b08d2f593ce44f1d2920c5077bf7d311fefec999f8c40f78b7"},
-    {file = "protobuf-5.28.2-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:35cfcb15f213449af7ff6198d6eb5f739c37d7e4f1c09b5d0641babf2cc0c68f"},
-    {file = "protobuf-5.28.2-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:5e8a95246d581eef20471b5d5ba010d55f66740942b95ba9b872d918c459452f"},
-    {file = "protobuf-5.28.2-cp38-cp38-win32.whl", hash = "sha256:87317e9bcda04a32f2ee82089a204d3a2f0d3c8aeed16568c7daf4756e4f1fe0"},
-    {file = "protobuf-5.28.2-cp38-cp38-win_amd64.whl", hash = "sha256:c0ea0123dac3399a2eeb1a1443d82b7afc9ff40241433296769f7da42d142ec3"},
-    {file = "protobuf-5.28.2-cp39-cp39-win32.whl", hash = "sha256:ca53faf29896c526863366a52a8f4d88e69cd04ec9571ed6082fa117fac3ab36"},
-    {file = "protobuf-5.28.2-cp39-cp39-win_amd64.whl", hash = "sha256:8ddc60bf374785fb7cb12510b267f59067fa10087325b8e1855b898a0d81d276"},
-    {file = "protobuf-5.28.2-py3-none-any.whl", hash = "sha256:52235802093bd8a2811abbe8bf0ab9c5f54cca0a751fdd3f6ac2a21438bffece"},
-    {file = "protobuf-5.28.2.tar.gz", hash = "sha256:59379674ff119717404f7454647913787034f03fe7049cbef1d74a97bb4593f0"},
-]
 
 [[package]]
 name = "publicsuffix2"
@@ -1397,4 +1375,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "e3074ab3be368849e449b8c9dd44b3f68d30cc24eadc6612b4e40634b534f3cd"
+content-hash = "2f0f710b216d86fccdcc3fa667c9c242c1ce45e44c90ed65131ac7ab69ec9f09"
