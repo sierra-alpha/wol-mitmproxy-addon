@@ -13,7 +13,7 @@ python = "^3.10"
 mitmproxy = "^11.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^8.3.3"
+pytest = "^8.3.5"
 ruff = "^0.7.1"
 
 [build-system]
