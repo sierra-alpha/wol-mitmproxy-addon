@@ -14,7 +14,7 @@ mitmproxy = "^11.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.3"
-ruff = "^0.7.1"
+ruff = "^0.11.10"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
